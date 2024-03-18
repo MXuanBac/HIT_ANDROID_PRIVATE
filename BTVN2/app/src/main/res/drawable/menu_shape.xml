@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Trạng thái khi nút được nhấn -->
+    <item android:state_pressed="true">
+        <layer-list>
+            <!-- Border layer khi được nhấn -->
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="@android:color/transparent" />
+                    <stroke
+                        android:width="2dp"
+                        android:color="@color/black" />
+                </shape>
+            </item>
+            <!-- Background layer giữ nguyên màu -->
+            <item android:top="2dp" android:right="2dp" android:bottom="2dp" android:left="2dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/opacity" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <!-- Trạng thái mặc định -->
+    <item>
+        <layer-list>
+            <!-- Border layer mặc định -->
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="@android:color/transparent" />
+                    <stroke
+                        android:width="2dp"
+                        android:color="@color/opacity" />
+                </shape>
+            </item>
+            <!-- Background layer mặc định -->
+            <item android:top="2dp" android:right="2dp" android:bottom="2dp" android:left="2dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/white" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>
